@@ -9,8 +9,9 @@
 
 @implementation Inhumane 
 
-- (void)killThatInnocentPerson {
-	NSLog(@"%@: Killed that innocent person, sir!",NSStringFromClass([self class]));
+- (void)killThatInnocentPerson
+{
+    NSLog(@"%@: Killed that innocent person, sir!",NSStringFromClass([self class]));
 }
 
 @end

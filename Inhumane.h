@@ -12,6 +12,7 @@
 
 @end
 
-@interface Inhumane : NSObject <Inhumane> {}
+@interface Inhumane : NSObject <Inhumane>
+
 @end 
 

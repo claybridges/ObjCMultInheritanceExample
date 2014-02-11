@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6F93278912444B6400AF542F /* Hilarious.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F93278412444B6400AF542F /* Hilarious.m */; };
 		6F93278A12444B6400AF542F /* Inhumane.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F93278612444B6400AF542F /* Inhumane.m */; };
-		6F93278B12444B6400AF542F /* Man.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F93278812444B6400AF542F /* Man.m */; };
+		6F93278B12444B6400AF542F /* Human.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F93278812444B6400AF542F /* Human.m */; };
 		8DD76F9A0486AA7600D96B5E /* ObjCMultInheritanceExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* ObjCMultInheritanceExample.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -34,8 +34,8 @@
 		6F93278412444B6400AF542F /* Hilarious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hilarious.m; sourceTree = "<group>"; };
 		6F93278512444B6400AF542F /* Inhumane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inhumane.h; sourceTree = "<group>"; };
 		6F93278612444B6400AF542F /* Inhumane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inhumane.m; sourceTree = "<group>"; };
-		6F93278712444B6400AF542F /* Man.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Man.h; sourceTree = "<group>"; };
-		6F93278812444B6400AF542F /* Man.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Man.m; sourceTree = "<group>"; };
+		6F93278712444B6400AF542F /* Human.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
+		6F93278812444B6400AF542F /* Human.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Human.m; sourceTree = "<group>"; };
 		8DD76FA10486AA7600D96B5E /* ObjCMultInheritanceExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjCMultInheritanceExample; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,8 +64,8 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				6F93278712444B6400AF542F /* Man.h */,
-				6F93278812444B6400AF542F /* Man.m */,
+				6F93278712444B6400AF542F /* Human.h */,
+				6F93278812444B6400AF542F /* Human.m */,
 				6F93278512444B6400AF542F /* Inhumane.h */,
 				6F93278612444B6400AF542F /* Inhumane.m */,
 				6F93278312444B6400AF542F /* Hilarious.h */,
@@ -118,6 +118,8 @@
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "ObjCMultInheritanceExample" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -145,7 +147,7 @@
 				8DD76F9A0486AA7600D96B5E /* ObjCMultInheritanceExample.m in Sources */,
 				6F93278912444B6400AF542F /* Hilarious.m in Sources */,
 				6F93278A12444B6400AF542F /* Inhumane.m in Sources */,
-				6F93278B12444B6400AF542F /* Man.m in Sources */,
+				6F93278B12444B6400AF542F /* Human.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +158,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -165,6 +169,7 @@
 				GCC_PREFIX_HEADER = ObjCMultInheritanceExample_Prefix.pch;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = ObjCMultInheritanceExample;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -172,38 +177,41 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ObjCMultInheritanceExample_Prefix.pch;
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = ObjCMultInheritanceExample;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		1DEB927908733DD40010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		1DEB927A08733DD40010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};

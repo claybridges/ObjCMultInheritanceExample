@@ -10,7 +10,7 @@
 @implementation Hilarious 
 
 - (void)makeMeLaugh {
-	NSLog(@"%@: \"... and it won't stop 'til it gets 10 gallons!\"",NSStringFromClass([self class]));
+    NSLog(@"%@: ... we call it \"The Aristocrats\"!",NSStringFromClass([self class]));
 }
 
 @end

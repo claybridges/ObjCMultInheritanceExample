@@ -11,6 +11,7 @@
 
 @end
 
-@interface Hilarious : NSObject <Hilarious> {}
+@interface Hilarious : NSObject <Hilarious>
+
 @end 
 

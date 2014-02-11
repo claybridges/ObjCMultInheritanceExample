@@ -1,12 +1,12 @@
-#import "Man.h"
+#import "Human.h"
 
 int main (int argc, const char * argv[]) {
-	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-	
-	Man *man = [[[Man alloc] init] autorelease];
-	[man killThatInnocentPerson];
-	[man makeMeLaugh];
-	
-	[pool drain];
-	return 0;
+    @autoreleasepool {
+
+        Human *human = [[Human alloc] init];
+        [human killThatInnocentPerson];
+        [human makeMeLaugh];
+
+    }
+    return 0;
 }
